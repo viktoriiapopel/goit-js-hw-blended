@@ -27,16 +27,6 @@ body {
   text-decoration: none;
 }
 
-/* Бургер
-.burger {
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 1100;
-} */
-
 /* Мобільне меню */
 .nav {
   position: fixed;
@@ -110,13 +100,15 @@ body {
 
 /* ======= Десктоп (від 768px) ======= */
 @media (min-width: 768px) {
-  .burger,
-  .nav,
+  .burger {
+    display: none !important; /* бургер приховуємо */
+  }
   .close {
-    display: none; /* бургер приховуємо */
+    display: none;
   }
 
   .nav {
+    display: flex;
     position: static;
     height: auto;
     left: auto;
