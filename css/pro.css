@@ -1,0 +1,137 @@
+/* базові стилі */
+/* Базові стилі */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Хедер */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background: #0f172a;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Бургер
+.burger {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+} */
+
+/* Мобільне меню */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+  z-index: 1050;
+}
+
+.nav.open {
+  left: 0;
+}
+
+.nav .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav li {
+  margin: 1rem 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+}
+
+.burger {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+}
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    display: flex; /* ховаємо за межі екрана */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ======= Десктоп (від 768px) ======= */
+@media (min-width: 768px) {
+  .burger,
+  .nav,
+  .close {
+    display: none; /* бургер приховуємо */
+  }
+
+  .nav {
+    position: static;
+    height: auto;
+    left: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: none;
+    transition: none;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav li {
+    margin: 0;
+  }
+}

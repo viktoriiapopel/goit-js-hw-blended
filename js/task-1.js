@@ -1,7 +1,15 @@
-function makeTransaction(quantity, pricePerDroid) {
-  return `You ordered ${quantity} droids worth ${quantity * pricePerDroid} credits!`;
-}
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+const closeBtn = document.querySelector('.close');
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
+burger.addEventListener('click', () => {
+  nav.classList.add('open');
+  console.log(`close`);
+});
+
+closeBtn.addEventListener('click', () => {
+  nav.classList.remove('open');
+  console.log(`open`);
+});
+
+// Відкриття і закриття меню
