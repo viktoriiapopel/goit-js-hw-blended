@@ -19,7 +19,7 @@ body {
   padding: 0 1rem;
   background: #0f172a;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
